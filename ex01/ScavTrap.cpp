@@ -6,7 +6,7 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 16:50:09 by rnovotny          #+#    #+#             */
-/*   Updated: 2025/05/17 11:02:45 by rnovotny         ###   ########.fr       */
+/*   Updated: 2025/05/17 16:48:21 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ ScavTrap::ScavTrap(const ScavTrap &other) : ClapTrap(other)
 
 ScavTrap &ScavTrap::operator=(const ScavTrap &other)
 {
-	std::cout << "ScavTrap " << _name << " assigned." << std::endl;
 	if (this != &other)
 	{
 		_name = other._name;
@@ -44,6 +43,7 @@ ScavTrap &ScavTrap::operator=(const ScavTrap &other)
 		_energyPoints = other._energyPoints;
 		_attackDamage = other._attackDamage;
 	}
+	std::cout << "ScavTrap " << _name << " assigned." << std::endl;
 	return *this;
 }
 

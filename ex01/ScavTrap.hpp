@@ -6,7 +6,7 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 16:50:13 by rnovotny          #+#    #+#             */
-/*   Updated: 2025/05/17 11:01:15 by rnovotny         ###   ########.fr       */
+/*   Updated: 2025/05/17 16:49:22 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class ScavTrap : public ClapTrap
 		ScavTrap &operator=(const ScavTrap &other);
 		~ScavTrap();
 
-		void attack(const std::string &target) override;
+		void attack(const std::string &target);
 		void guardGate();
 };
 
