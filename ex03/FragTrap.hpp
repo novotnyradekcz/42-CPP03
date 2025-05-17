@@ -1,36 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/16 16:35:00 by rnovotny          #+#    #+#             */
-/*   Updated: 2025/05/17 17:31:41 by rnovotny         ###   ########.fr       */
+/*   Created: 2025/05/17 11:14:54 by rnovotny          #+#    #+#             */
+/*   Updated: 2025/05/17 17:22:04 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#ifndef FRAGTRAP_HPP
+# define FRAGTRAP_HPP
 
-int main()
+# include <iostream>
+# include <string>
+
+# include "ClapTrap.hpp"
+
+class FragTrap : virtual public ClapTrap
 {
-	ClapTrap claptrap("ClapTrap");
-	ClapTrap copy(claptrap);
-	ClapTrap assign;
-	assign = claptrap;
+	public:
+		FragTrap();
+		FragTrap(std::string name);
+		FragTrap(const FragTrap &other);
+		FragTrap &operator=(const FragTrap &other);
+		~FragTrap();
 
-	claptrap.attack("target");
-	claptrap.takeDamage(5);
-	claptrap.beRepaired(3);
+		void highFivesGuys(void);
+};
 
-	ClapTrap *heapClaptrap = new ClapTrap("HeapClapTrap");
-
-	heapClaptrap->attack("target");
-	heapClaptrap->takeDamage(5);
-	heapClaptrap->beRepaired(3);
-
-	delete heapClaptrap;
-
-	return 0;
-}
-	
+#endif

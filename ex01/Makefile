@@ -6,7 +6,7 @@
 #    By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/11 16:53:34 by rnovotny          #+#    #+#              #
-#    Updated: 2025/05/16 16:48:55 by rnovotny         ###   ########.fr        #
+#    Updated: 2025/05/17 16:55:41 by rnovotny         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,6 @@ CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 SRCS = main.cpp \
 		ClapTrap.cpp \
 		ScavTrap.cpp
-		
 OBJS = $(SRCS:.cpp=.o)
 RM = rm -f
 

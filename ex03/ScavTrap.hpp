@@ -1,36 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/16 16:35:00 by rnovotny          #+#    #+#             */
-/*   Updated: 2025/05/17 17:31:41 by rnovotny         ###   ########.fr       */
+/*   Created: 2025/05/16 16:50:13 by rnovotny          #+#    #+#             */
+/*   Updated: 2025/05/17 17:22:12 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
 
-int main()
+# include "ClapTrap.hpp"
+
+class ScavTrap : virtual public ClapTrap
 {
-	ClapTrap claptrap("ClapTrap");
-	ClapTrap copy(claptrap);
-	ClapTrap assign;
-	assign = claptrap;
+	public:
+		ScavTrap();
+		ScavTrap(std::string name);
+		ScavTrap(const ScavTrap &other);
+		ScavTrap &operator=(const ScavTrap &other);
+		~ScavTrap();
 
-	claptrap.attack("target");
-	claptrap.takeDamage(5);
-	claptrap.beRepaired(3);
+		void attack(const std::string &target);
+		void guardGate();
+};
 
-	ClapTrap *heapClaptrap = new ClapTrap("HeapClapTrap");
-
-	heapClaptrap->attack("target");
-	heapClaptrap->takeDamage(5);
-	heapClaptrap->beRepaired(3);
-
-	delete heapClaptrap;
-
-	return 0;
-}
-	
+#endif

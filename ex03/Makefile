@@ -6,15 +6,18 @@
 #    By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/11 16:53:34 by rnovotny          #+#    #+#              #
-#    Updated: 2025/05/17 16:55:47 by rnovotny         ###   ########.fr        #
+#    Updated: 2025/05/17 17:34:36 by rnovotny         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = open
+NAME = diamond
 CC = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 SRCS = main.cpp \
-		ClapTrap.cpp
+		ClapTrap.cpp \
+		ScavTrap.cpp \
+		FragTrap.cpp \
+		DiamondTrap.cpp
 OBJS = $(SRCS:.cpp=.o)
 RM = rm -f
 

@@ -6,7 +6,7 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 16:35:00 by rnovotny          #+#    #+#             */
-/*   Updated: 2025/05/17 11:36:34 by rnovotny         ###   ########.fr       */
+/*   Updated: 2025/05/17 17:31:24 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,4 +41,6 @@ int main()
 	fragtrap.takeDamage(5);
 	fragtrap.beRepaired(3);
 	fragtrap.highFivesGuys();
+
+	return 0;
 }

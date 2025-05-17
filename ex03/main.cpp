@@ -6,41 +6,26 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 16:35:00 by rnovotny          #+#    #+#             */
-/*   Updated: 2025/05/17 17:31:32 by rnovotny         ###   ########.fr       */
+/*   Updated: 2025/05/17 17:32:43 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
-#include "ScavTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int main()
 {
-	ClapTrap claptrap("ClapTrap");
-	ClapTrap copy(claptrap);
-	ClapTrap assign;
-	assign = claptrap;
+	DiamondTrap defaultDiamond;
+	DiamondTrap diamond("DiamondTrap");
+	DiamondTrap copy(diamond);
+	DiamondTrap assign;
+	assign = diamond;
 
-	claptrap.attack("target");
-	claptrap.takeDamage(5);
-	claptrap.beRepaired(3);
-
-	ClapTrap *heapClaptrap = new ClapTrap("HeapClapTrap");
-
-	heapClaptrap->attack("target");
-	heapClaptrap->takeDamage(5);
-	heapClaptrap->beRepaired(3);
-
-	delete heapClaptrap;
-
-	ScavTrap scavtrap("ScavTrap");
-	ScavTrap copyScav(scavtrap);
-	ScavTrap assignScav;
-	assignScav = scavtrap;
-	
-	scavtrap.attack("target");
-	scavtrap.takeDamage(5);
-	scavtrap.beRepaired(3);
-	scavtrap.guardGate();
+	diamond.attack("target");
+	diamond.takeDamage(5);
+	diamond.beRepaired(3);
+	diamond.guardGate();
+	diamond.highFivesGuys();
+	diamond.whoAmI();
 
 	return 0;
 }
